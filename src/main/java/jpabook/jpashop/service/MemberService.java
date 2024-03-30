@@ -47,6 +47,6 @@ public class MemberService {
 
     /*
         readOnly allows to database optimise itself
-        Annotation Transactional has true as default value for readOnly
+        Annotation Transactional has true as default for readOnly
      */
 }

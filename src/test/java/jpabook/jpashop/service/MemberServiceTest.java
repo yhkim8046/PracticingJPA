@@ -45,5 +45,8 @@ class MemberServiceTest {
         //When
         memberService.join(member1); memberService.join(member2); //예외가 발생해야 한다.
         //Then
-        fail("Must throw an exception."); }
+        fail("Must throw an exception.");
+    }
+
+
 }
