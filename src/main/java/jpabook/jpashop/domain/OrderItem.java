@@ -33,6 +33,18 @@ public class OrderItem {
     private int orderPrice; //주문 가격
     private int count; //주문 수량
 
+    //==Creation Logic==//
+    public static OrderItem createOrderItem(Item item, int orderPrice, int Count){
+        OrderItem orderItem = new OrderItem();
+        orderItem.setItem(item);
+        orderItem.setOrderPrice(orderPrice);
+        orderItem.setCount(Count);
+
+        item.removeStock(orderItem.count);
+        return orderItem;
+    }
+
+
     //==Business logic==//
     public void cancel(){
         getItem().addStock(count);

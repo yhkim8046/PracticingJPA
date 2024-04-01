@@ -84,7 +84,7 @@ public class Order {
         if(delivery.getStatus() == DeliveryStatus.COMP){
             throw new IllegalStateException("Already Delivered");
         }
-        this.setStatus(OrderStatus.ORDER);
+        this.setStatus(OrderStatus.CANCEL);
         for (OrderItem orderItem : orderItems) {
             orderItem.cancel();
         }
